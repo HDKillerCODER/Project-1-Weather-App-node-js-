@@ -1,0 +1,32 @@
+body {
+    color: red;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: url('/js/background.jpg');
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    background-size: cover;
+}
+footer {
+    color: blue;
+    border-top: 1px solid #eeeeee;
+}
+h4{
+    font-size: 25px;
+}
+button{
+    margin-left: 10px;
+    size: 10rem;
+    border: 1px solid blue;
+    background: blue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 8px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    font-family: arial;
+}
