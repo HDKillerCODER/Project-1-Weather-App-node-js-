@@ -115,6 +115,7 @@ const forecast = require('./utils/forecast.js')
 
 const app = express()
 
+const port = process.env.port || 3000;
 // Defining paths (express config)
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewspath = path.join(__dirname, '../templates/views');
@@ -188,10 +189,37 @@ app.get('*', (req, res) => {
         helpText: 'Page not found'
     })
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port '+ port);
 })
 
 // when you run nodemon src/app.js then it is searching views folder in /web-sever directory
 // but when you run nodemon app.js from the src folder then code is looking for the views
 // folder in src folder.
+
+
+// SSH keys for secure transmission
+// ls - list directories of the current folder
+// !!   ls -a -->  list all the hidden files
+// !!   ls -a -l --> list all the files in the column manner
+// ls -a -l ~/.ssh --> to check the ssh folder in the user directory
+
+// ssh-keygen  ===== allows to generate ssh key
+// ssh-keygen -t rsa -b 4096 -C "harshdhiman9484@gmail.com"
+
+// then rerun the first command
+
+// after that run the ssh agent::::    eval "$(ssh-agent -s)"
+
+// then add the identity::::    ssh-add -K ~/.ssh/id_rsa
+//then finally our identitiy will be added
+
+
+//cat ~/.ssh/id_rsa.pub
+//ssh -T git@github.com  ===== going to test connection between us and github
+//========================over for pushing the code to github================================
+
+
+// setting up the heroku
+//1. heroku keys:add ======= simply to add the key
+//2. we set up the command to initialise our application heroku create hd-weather-app
